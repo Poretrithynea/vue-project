@@ -18,6 +18,6 @@ node {
     } 
     stage('Trigger ManifestUpdate') {
                 echo "triggering updateDeploymentjob"
-                build job: 'updateDeployment', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+                build job: 'updateDeploymentFrontend', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
 }
